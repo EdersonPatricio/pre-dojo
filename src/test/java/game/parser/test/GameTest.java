@@ -25,7 +25,7 @@ public class GameTest {
 	 * */
 	@Test
 	public void readFileExistent() throws FileNotFoundException {
-		FileReader file = new FileReader( "game.log" );
+		FileReader file = new FileReader( "src/test/resources/Game.log" );
 		Assert.assertNotNull( file );
 	}
 
@@ -39,7 +39,7 @@ public class GameTest {
 	 * */
 	@Test( expected = FileNotFoundException.class )
 	public void readFileInexistent() throws FileNotFoundException {
-		FileReader file = new FileReader( "games.log" );
+		FileReader file = new FileReader( "src/test/resources/Games.log" );
 		Assert.assertNull( file );
 	}
 
