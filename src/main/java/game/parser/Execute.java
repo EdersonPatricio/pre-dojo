@@ -1,6 +1,5 @@
 package game.parser;
 
-import game.parser.entities.ExportFile;
 import game.parser.entities.Ranking;
 
 import java.io.BufferedReader;
