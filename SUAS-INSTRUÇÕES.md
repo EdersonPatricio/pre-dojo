@@ -1,6 +1,5 @@
 Informações sobre o desenvolvimento do problema proposto
-======
-
+========
 ##1) Entendimento o problema
 ========
 Após analisar o problema posposto, cheguei à conlusão que precisaria dividir as responsabilidades para o desenvolvimento ser mais eficaz e completo.
