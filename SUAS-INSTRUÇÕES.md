@@ -27,7 +27,7 @@ do arquivo contendo todas as informações dos jogos e jogadores.
 Criei a classe Ranking.Test, onde a mesma é composta por 8 métodos, cada um com o objetivo de testar separadamente cada funcionalidade implementada.
 Feito o uso do framework JUnit para a realização e execução dos testes.
 
-Notas: 
+Notas
 ======
 
 O desenvolvimento em sí foi bem prazeroso, visto que adoro desafios. Procurei fazer da maneira mais correta e sucinta possível, e deixar responsabilidade de cada funcionalidade separada.
