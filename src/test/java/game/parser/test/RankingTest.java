@@ -1,7 +1,7 @@
 package game.parser.test;
 
+import game.parser.ExportFile;
 import game.parser.Parser;
-import game.parser.entities.ExportFile;
 import game.parser.entities.Player;
 import game.parser.entities.Ranking;
 
@@ -183,7 +183,7 @@ public class RankingTest {
 		Map<String, Player> killsByPlayers = ranking.getGames().get( 0 ).getKillsByPlayers();
 
 		for ( String nameOfPlayer : killsByPlayers.keySet() ) {
-			if ( nameOfPlayer.equals( "Barak Obama" ) ) {
+			if ( nameOfPlayer.equals( "Barack Obama" ) ) {
 				Player player = killsByPlayers.get( nameOfPlayer );
 				Assert.assertEquals( player.getKilled(), 1 );
 				Assert.assertEquals( player.getDied(), 0 );
