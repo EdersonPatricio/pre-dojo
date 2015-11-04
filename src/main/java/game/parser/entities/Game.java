@@ -8,7 +8,7 @@ public class Game {
 
 	private Integer totalKillsByGame;
 
-	private Map<String, Map<String, Player>> killsByPlayers;
+	private Map<String, Player> killsByPlayers;
 
 	public Game() {
 
@@ -34,11 +34,11 @@ public class Game {
 		this.totalKillsByGame = totalKillsByGame;
 	}
 
-	public Map<String, Map<String, Player>> getKillsByPlayers() {
+	public Map<String, Player> getKillsByPlayers() {
 		return killsByPlayers;
 	}
 
-	public void setKillsByPlayers( Map<String, Map<String, Player>> killsByPlayers ) {
+	public void setKillsByPlayers( Map<String, Player> killsByPlayers ) {
 		this.killsByPlayers = killsByPlayers;
 	}
 
