@@ -1,7 +1,7 @@
 Informações sobre o desenvolvimento do problema proposto
 ========
 ##1) Entendimento o problema
-========
+
 Após analisar o problema posposto, cheguei à conlusão que precisaria dividir as responsabilidades para o desenvolvimento ser mais eficaz e completo.
 Com isso, criei a classe Ranking.java, que seria responsável por ter a lista de games. A classe Game.java, por sua vez, possua as informações referentes à cada jogo,
 como o nome do jogo, o total de mortes por jogo, e um mapa que guardará o nome do jogador com seu respectivo objeto Player.
@@ -29,5 +29,5 @@ Feito o uso do framework JUnit para a realização e execução dos testes.
 Notas
 ======
 
-O desenvolvimento em sí foi bem prazeroso, visto que adoro desafios. Procurei fazer da maneira mais correta e sucinta possível, e deixar responsabilidade de cada funcionalidade separada.
-Também comentei todos os métodos, e trechos dos códigos, para tornar mais ainda legível a interpretação do código.
+O desenvolvimento em sí foi bem prazeroso, visto que adoro desafios. Procurei fazer da maneira mais correta e sucinta possível, e deixar a responsabilidade de cada funcionalidade separada.
+Também comentei todos os métodos, e trechos dos códigos, para tornar ainda mais legível a interpretação do código.
