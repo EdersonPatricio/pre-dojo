@@ -1,39 +1,34 @@
-PROBLEMA
+Informações sobre o desenvolvimento do problema proposto
+======
+
+##1) Entendimento o problema
 ========
-Dado o seguinte log de um jogo de tiro em primeira pessoa:
-
-23/04/2013 15:34:22 - New match 11348965 has started
-23/04/2013 15:36:04 - Roman killed Nick using M16
-23/04/2013 15:36:33 - <WORLD> killed Nick by DROWN
-23/04/2013 15:39:22 - Match 11348965 has ended
-
-Escreva um código para
------------------------
-* Montar o ranking de cada partida, com a quantidade assassinatos e a quantidade de mortes de cada jogador;
-
-Observações:
-* Assassinatos realizados pelo player <WORLD> devem ser desconsiderados.
+Após analisar o problema posposto, cheguei à conlusão que precisaria dividir as responsabilidades para o desenvolvimento ser mais eficaz e completo.
+Com isso, criei a classe Ranking.java, que seria responsável por ter a lista de games. A classe Game.java, por sua vez, possua as informações referentes à cada jogo,
+como o nome do jogo, o total de mortes por jogo, e um mapa que guardará o nome do jogador com seu respectivo objeto Player.
+Já a classe Player.java, possue o nome do jogador, e a quantidade de assassinatos e mortes.
 
 
-Bônus 
-(Não obrigatório. Faça apenas caso se identifique com o problema ou se achar que há algo interessante a ser mostrado na solução)
------
-* Descobrir a arma preferida (a que mais matou) do vencedor;
-* Identificar a maior sequência de assassinatos efetuadas por um jogador (streak) sem morrer, dentro da partida;
-* Jogadores que vencerem uma partida sem morrerem devem ganhar um "award";
-* Jogadores que matarem 5 vezes em 1 minuto devem ganhar um "award".
+##2) Implementando a solução:
 
+Após implementadas as classes mencionadas no tópico anterior( Ranking.java, Game.java, Player.java ), iniciei o desenvolvimento da classe Parser.java, que recebe um BufferedReader
+para que seja efetuada a sua leitura. Apartir daí, é feito a separação de cada jogador, cada jogo, e todos atrelados entre sí( Players -> Games -> Ranking ),
+seguindo a lógica de somar assasinatos quando alguém mata alguém, e somar mortes quando alguém mata alguém ou o mundo mata alguém. 
 
-SOLUÇÃO
-=======
-* Seja criativo;
-* Explore ao máximo a orientação a objetos;
-* Crie testes unitários e tente usar TDD;
-* Não é necessário utilizar nenhum framework, mas fica ao seu critério;
+Após o desenvolvimento da classe Parser.java, desenvolvi a classe ExportFile.java, que é responsável por gerar um novo arquivo com as informações do Ranking gerado,
+onde são mostrados no arquivo todos os jogos com todas as informações de cada jogador em cada jogo.
 
-ENTREGA
-=======
-* Nos envie a url do seu repositório com a solução ou faça um pull request;
-* Utilize o arquivo SUAS-INSTRUÇÕES.txt para adicionar algum comentário/observação que achar importante.
+Feito isso, criei uma última classe, Execute.java, que é responsável por executar toda a aplicação, fazendo a leitura do arquivo, passado o arquivo para o método
+executeParseByFile da classe Parser.java, obtendo assim um objeto Ranking, e com isso passando o Ranking para a classe ExportFile.java, a qual fará o export
+do arquivo contendo todas as informações dos jogos e jogadores.
 
-BOA SORTE!
+##3) Criação da classe de teste
+
+Criei a classe Ranking.Test, onde a mesma é composta por 8 métodos, cada um com o objetivo de testar separadamente cada funcionalidade implementada.
+Feito o uso do framework JUnit para a realização e execução dos testes.
+
+Notas: 
+======
+
+O desenvolvimento em sí foi bem prazeroso, visto que adoro desafios. Procurei fazer da maneira mais correta e sucinta possível, e deixar responsabilidade de cada funcionalidade separada.
+Também comentei todos os métodos, e trechos dos códigos, para tornar mais ainda legível a interpretação do código.
