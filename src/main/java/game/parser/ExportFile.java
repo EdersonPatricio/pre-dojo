@@ -1,4 +1,8 @@
-package game.parser.entities;
+package game.parser;
+
+import game.parser.entities.Game;
+import game.parser.entities.Player;
+import game.parser.entities.Ranking;
 
 import java.io.File;
 import java.io.FileWriter;
